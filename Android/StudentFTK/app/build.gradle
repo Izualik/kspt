@@ -1,0 +1,30 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 15
+    buildToolsVersion '20.0.0'
+    defaultConfig {
+        applicationId 'com.example.izual.studentftk'
+        minSdkVersion 15
+        targetSdkVersion 15
+        versionCode 1
+        versionName '1.0'
+    }
+    buildTypes {
+        release {
+
+            minifyEnabled false // new version
+
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    productFlavors {
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support:support-v4:20.0.0'
+    compile 'com.google.android.gms:play-services:4.2.42'
+    compile files('src/main/java/libs/json-simple-1.1.1.jar')
+}
